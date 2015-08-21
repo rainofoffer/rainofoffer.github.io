@@ -1,24 +1,17 @@
-{% include header.html %}
+---
+layout: default
+---
 <!-- Main -->
-	<section class="wrapper style1">
-		<div class="container">
-
-			<!-- Blog -->
-				<section>
-					<header class="major">
+	<div id="main">
+		<div id="content" class="container">
+			<div class="row">
+				<section class="8u -2u">
+					<a href="{{ site.prefix }}{{ page.url }}" class="image full"><img src="/assets/{{ page.featured }}" alt=""></a>
+					<header>
 						<h2>{{ page.title }}</h2>
-						<p>Posted {{ page.date | date_to_string }}</p>
 					</header>
-					<div class="row">
-						<div class="8u -2u">
-							<section class="box">
-								<a href="#" class="image left"><img src="{{ page.featured }}" alt="" /></a>
-								{{ page.content }}
-							</section>
-						</div>
-					</div>
+					{{ page.content }}
 				</section>
-
+			</div>
 		</div>
-	</section>
-{% include footer.html %}
+	</div>
